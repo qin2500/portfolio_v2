@@ -20,7 +20,7 @@ const Banner = () => {
                         So, let's connect and build something amazing together! When I'm not coding, you'll find me snowboarding, biking, or enjoying card games with friends.
                     </p>
                     <div className="mt-8">
-                        <a href="mailto:anthony.qin@mail.utoronto.ca" className="text-blue-300 ">
+                        <a href="mailto:anthony.qin@mail.utoronto.ca" className="text-blue-300 underline ">
                             Contact Me!
                         </a>
                     </div>

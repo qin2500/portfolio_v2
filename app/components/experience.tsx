@@ -10,8 +10,8 @@ const experience = () => {
                     <div className="m-3">
                         <div className="flex text-2xl font-bold">
                             <p>Intern, Software Engineer, HCI & AI</p>
-                            <a href="https://www.research.autodesk.com/research-areas/science/#human" target="_blank" rel="noopener noreferrer" className="ml-3 text-blue-400">
-                                <p className="ml-1 text-blue-400">@Autodesk Research</p>
+                            <a href="https://www.research.autodesk.com/research-areas/science/#human" target="_blank" rel="noopener noreferrer" className="ml-3 text-blue-400 hover:text-blue-200 cursor-pointer">
+                                <p className="ml-1 text-blue-400 underline">@Autodesk Research</p>
                             </a>
                         </div>
                         <p className="flex text-lg font-bold">May - August 2024</p>
@@ -29,8 +29,8 @@ const experience = () => {
                     <div className="m-3 mt-10">
                         <div className="flex text-2xl font-bold">
                             <p>Intern, Software Engineer, HCI & AI</p>
-                            <a href="https://www.research.autodesk.com/research-areas/science/#human" target="_blank" rel="noopener noreferrer" className="ml-3 text-blue-400">
-                                <p className="ml-1 text-blue-400">@Autodesk Research</p>
+                            <a href="https://www.research.autodesk.com/research-areas/science/#human" target="_blank" rel="noopener noreferrer" className="ml-3 text-blue-400 hover:text-blue-200 cursor-pointer">
+                                <p className="ml-1 text-blue-400 underline">@Autodesk Research</p>
                             </a>
                         </div>
                         <p className="flex text-lg font-bold">May - August 2024</p>
