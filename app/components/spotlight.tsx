@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
 const spotlight = () => {
 
-    useEffect(() => {
-        const handleMouseMove = (e:any) => {
-            const spotlight = document.getElementById('spotlight');
-            if (!spotlight) return;
-            const scrollPosition = window.scrollY;
-            spotlight.style.left = e.pageX  + 'px';
-            spotlight.style.top = e.pageY -scrollPosition + 'px';
-        };
+    // useEffect(() => {
+    //     const handleMouseMove = (e:any) => {
+    //         const spotlight = document.getElementById('spotlight');
+    //         if (!spotlight) return;
+    //         const scrollPosition = window.scrollY;
+    //         spotlight.style.left = e.pageX  + 'px';
+    //         spotlight.style.top = e.pageY -scrollPosition + 'px';
+    //     };
 
-        document.addEventListener('mousemove', handleMouseMove);
+    //     document.addEventListener('mousemove', handleMouseMove);
 
-        // Clean up event listener on component unmount
-        return () => {
-        document.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []); 
+    //     // Clean up event listener on component unmount
+    //     return () => {
+    //     document.removeEventListener('mousemove', handleMouseMove);
+    //     };
+    // }, []); 
 
     return(
         <div className="h-full w-full fixed z-10">
