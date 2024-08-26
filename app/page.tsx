@@ -1,7 +1,7 @@
 'use client'
 import React, {useRef} from "react"
 
-import Spotlight from "./components/spotlight"
+// import Spotlight from "./components/spotlight"
 import Navbar from "./components/navBar"
 import Banner from "./components/banner"
 import Experience from "./components/experience"
@@ -14,7 +14,7 @@ export default function Home() {
   const projectsRef = useRef(null);
   return (
     <div className="bg-gradient-to-b from-slate-950 to-slate-900 min-h-screen h-full">
-      <Spotlight></Spotlight>
+      {/* <Spotlight></Spotlight> */}
       <Navbar homeRef={homeRef} experienceRef={experienceRef} projectsRef={projectsRef}></Navbar>
       <div ref={homeRef}><Banner></Banner></div>
 
