@@ -2,6 +2,7 @@ import { Typography , IconButton} from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Itch from '../../public/assets/itch.svg';
+import Devpost from '../../public/assets/devpost.svg';
 
 const Banner = () => {
     return(
@@ -20,8 +21,8 @@ const Banner = () => {
                         So, let's connect and build something amazing together! When I'm not coding, you'll find me snowboarding, biking, or enjoying card games with friends.
                     </p>
                     <div className="mt-8">
-                        <a href="mailto:anthony.qin@mail.utoronto.ca" className="text-blue-300 underline ">
-                            Contact Me!
+                        <a href="mailto:anthony.qin@mail.utoronto.ca" className="text-blue-300 underline z-50">
+                            Contact Me!📧
                         </a>
                     </div>
                     
@@ -39,6 +40,9 @@ const Banner = () => {
                 </IconButton>
                 <IconButton href="https://qin2500.itch.io" target="_blank" aria-label="itch.io">
                     <img src={Itch.src} alt="Itch" className="text-white" style={{width: '30px', height: '30px'}} />
+                </IconButton>
+                <IconButton href="https://devpost.com/qin2500?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank" aria-label="itch.io">
+                    <img src={Devpost.src} alt="Itch" className="text-white" style={{width: '30px', height: '30px'}} />
                 </IconButton>
             </div>
 

@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, Box, useMediaQuery, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-const Navbar = () => {
+const Navbar = ({homeRef, experienceRef, projectsRef} : {homeRef: React.RefObject<HTMLDivElement>, experienceRef: React.RefObject<HTMLDivElement>, projectsRef: React.RefObject<HTMLDivElement>}) => {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
   
-    const handleDrawerOpen = () => {
-      setDrawerOpen(true);
-    };
-  
-    const handleDrawerClose = () => {
-      setDrawerOpen(false);
-    };
+    const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+        if(!ref || !ref.current) return;
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+      };
   
     return (
       <AppBar position="fixed" style={{ background: 'transparent', boxShadow: 'none'}}>
@@ -37,9 +34,9 @@ const Navbar = () => {
                 ) : (
                     <div className="flex">
                         <Box  className=" ml-10% bg-blue-600 bg-opacity-60 rounded-lg">
-                            <Button color="inherit" href="#home">Home</Button>
-                            <Button color="inherit" href="#experience">Experience</Button>
-                            <Button color="inherit" href="#projects">Projects</Button>
+                            <Button color="inherit" onClick={() => scrollToRef(homeRef)}>About</Button>
+                            <Button color="inherit" onClick={() => scrollToRef(experienceRef)}>Experience</Button>
+                            <Button color="inherit" onClick={() => scrollToRef(projectsRef)}>Projects</Button>
                         </Box>
                         <div className=' flex ml-2 items-center'>
                             <Button color="inherit" className='bg-slate-300 bg-opacity-60 rounded-lg' href="#projects">Resume</Button>

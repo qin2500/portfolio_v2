@@ -8,38 +8,35 @@ const experience = () => {
                 <div className="bg-slate-50 bg-opacity-5 mt-7 p-5 outline-dotted outline-slate-200 rounded-lg">
                     {/* Autodesk */}
                     <div className="m-3">
-                        <div className="flex text-2xl font-bold">
+                        <div className="flex text-2xl font-bold flex-col w-full">
                             <p>Intern, Software Engineer, HCI & AI</p>
-                            <a href="https://www.research.autodesk.com/research-areas/science/#human" target="_blank" rel="noopener noreferrer" className="ml-3 text-blue-400 hover:text-blue-200 cursor-pointer">
+                            <a href="https://www.research.autodesk.com/research-areas/science/#human" target="_blank" rel="noopener noreferrer" className=" w-fit text-blue-400 hover:text-blue-200 cursor-pointer">
                                 <p className="ml-1 text-blue-400 underline">@Autodesk Research</p>
-                            </a>
+                            </a>        
                         </div>
                         <p className="flex text-lg font-bold">May - August 2024</p>
                          <div className="mt-3">
                             <p>
-                                I'm a 4th year student at the University of Toronto studying software Engineering. 
-                                I'm passionate about software development, machine learning, and game development. 
-                                I recently completed my internship at Autodesk Research, and currently seeking opertunities in 2025
-                                So, let's connect and build something amazing together! When I'm not coding, you'll find me snowboarding, biking, or enjoying card games with friends.
+                                Built and styled an interactive web based Ai-driven prototype for Autodesk Research's HCI and Data Visualization team using Next.js.
                             </p>
                          </div>
                     </div>
 
                     {/* Manulife */}
                     <div className="m-3 mt-10">
-                        <div className="flex text-2xl font-bold">
-                            <p>Intern, Software Engineer, HCI & AI</p>
-                            <a href="https://www.research.autodesk.com/research-areas/science/#human" target="_blank" rel="noopener noreferrer" className="ml-3 text-blue-400 hover:text-blue-200 cursor-pointer">
-                                <p className="ml-1 text-blue-400 underline">@Autodesk Research</p>
-                            </a>
+                        <div className="flex text-2xl font-bold flex-col">
+                            <p>Full Stack Engineer Co-op</p>
+                            <p className="ml-1 text-blue-400">@Manulife</p>
+
                         </div>
-                        <p className="flex text-lg font-bold">May - August 2024</p>
+                        <p className="flex text-lg font-bold">January - April 2023</p>
                          <div className="mt-3">
                             <p>
-                                I'm a 4th year student at the University of Toronto studying software Engineering. 
-                                I'm passionate about software development, machine learning, and game development. 
-                                I recently completed my internship at Autodesk Research, and currently seeking opertunities in 2025
-                                So, let's connect and build something amazing together! When I'm not coding, you'll find me snowboarding, biking, or enjoying card games with friends.
+                                Built a fullstack internal dashboard application from scratch using Spring Boot and React.js, greatly improving the collaboration between different departments.
+
+                                Also, provided application support on existing projects by configuring servers using Putty, insuring that the application is running smoothly when needed 
+
+                                and assisted with development of automation scripts using PowerShell and C, dramatically improving the efficiency of my team.                            
                             </p>
                          </div>
                     </div>
