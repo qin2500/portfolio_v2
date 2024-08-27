@@ -28,7 +28,7 @@ const Banner = ({navRef} : {navRef:  React.RefObject<HTMLDivElement>}) => {
         <div className="w-full">
             <div className='flex  items-center w-full'
                 style={{height: '90vh'}}>
-                <div className="ml-[20%] mt-11 " style={{ maxHeight: maxHeight }}>
+                <div className="ml-[20%] mt-[10%] " style={{ maxHeight: maxHeight }}>
                     <h1 className="text-6xl text-slate-100 font-bold outline outline-slate-200 w-fit p-3 bg-slate-200 bg-opacity-30 mr-10">
                         Hi! I&apos;m Anthony Qin
                     </h1>
