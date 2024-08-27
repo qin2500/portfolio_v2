@@ -39,7 +39,9 @@ const Navbar = ({homeRef, experienceRef, projectsRef} : {homeRef: React.RefObjec
                             <Button color="inherit" onClick={() => scrollToRef(projectsRef)}>Projects</Button>
                         </Box>
                         <div className=' flex ml-2 items-center'>
-                            <Button color="inherit" className='bg-slate-300 bg-opacity-60 rounded-lg' href="#projects">Resume</Button>
+                            <a href="/assets/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                                <Button color="inherit" className='bg-slate-300 bg-opacity-60 rounded-lg'>Resume</Button>
+                            </a>
 
                         </div>
                     </div>
