@@ -9,7 +9,7 @@ const Banner = () => {
         <div className="w-full">
             <div className='flex  items-center w-full'
                 style={{height: '90vh'}}>
-                <div className="ml-[20%] mt-10 ">
+                <div className="ml-[20%] mt-16 ">
                     <h1 className="text-6xl text-slate-100 font-bold outline outline-slate-200 w-fit p-3 bg-slate-200 bg-opacity-30 mr-10">
                         Hi! I&apos;m Anthony Qin
                     </h1>
