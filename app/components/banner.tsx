@@ -3,13 +3,32 @@ import { GitHub } from "@mui/icons-material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Itch from '../../public/assets/itch.svg';
 import Devpost from '../../public/assets/devpost.svg';
+import { ReactHTMLElement, useEffect, useState } from "react";
 
-const Banner = () => {
+const Banner = ({navRef} : {navRef:  React.RefObject<HTMLDivElement>}) => {
+    const [maxHeight, setMaxHeight] = useState('100vh');
+    useEffect(() => {
+        const handleResize = () => {
+          if (navRef.current) {
+            const navHeight = navRef.current.getBoundingClientRect().height;
+            const viewportHeight = window.innerHeight;
+            setMaxHeight(`${viewportHeight - navHeight}px`);
+          }
+        };
+    
+        handleResize();
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+
     return(
         <div className="w-full">
             <div className='flex  items-center w-full'
                 style={{height: '90vh'}}>
-                <div className="ml-[20%] mt-11 ">
+                <div className="ml-[20%] mt-11 " style={{ maxHeight }}>
                     <h1 className="text-6xl text-slate-100 font-bold outline outline-slate-200 w-fit p-3 bg-slate-200 bg-opacity-30 mr-10">
                         Hi! I&apos;m Anthony Qin
                     </h1>
