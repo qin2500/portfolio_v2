@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-b from-slate-950 to-slate-900 min-h-screen h-full ">
       {/* <Spotlight></Spotlight> */}
-      <Navbar homeRef={navRef} experienceRef={experienceRef} projectsRef={projectsRef}></Navbar>
+      <div ref={navRef}><Navbar homeRef={homeRef} experienceRef={experienceRef} projectsRef={projectsRef}></Navbar></div>
       <div ref={homeRef} className="flex-grow"><Banner navRef={navRef}></Banner></div>
 
       <div className="text-slate-100 flex flex-col items-center max-w-[1300px] mx-auto mb-[5%]">
