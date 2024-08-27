@@ -17,7 +17,7 @@ const experience = () => {
                         <p className="flex text-lg font-bold">May - August 2024</p>
                          <div className="mt-3">
                             <p>
-                                Built and styled an interactive web based Ai-driven prototype for Autodesk Research's HCI and Data Visualization team using Next.js.
+                                Built and styled an interactive web based Ai-driven prototype for Autodesk Research&apos;s HCI and Data Visualization team using Next.js.
                             </p>
                          </div>
                     </div>
