@@ -17,7 +17,12 @@ const experience = () => {
                         <p className="flex text-lg font-bold">May - August 2024</p>
                          <div className="mt-3">
                             <p>
-                                Built and styled an interactive web based Ai-driven prototype for Autodesk Research&apos;s HCI and Data Visualization team using Next.js.
+                                Developed a web-based prototype using Next.js, LangChain, and React Flow to help authors visualize
+                                and analyze their stories. By leveraging large language models, I automated the extraction of narrative 
+                                elements, enabling the creation of digital storyboards. Collaborated closely with my research manager 
+                                to refine project direction, focusing on providing innovative perspectives for authors. 
+                                Designed a flexible software architecture that facilitated rapid prototyping and adaptation to evolving 
+                                project needs.                            
                             </p>
                          </div>
                     </div>
