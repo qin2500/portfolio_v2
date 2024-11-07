@@ -36,8 +36,9 @@ const Banner = ({navRef} : {navRef:  React.RefObject<HTMLDivElement>}) => {
                     <p className="text-slate-100 w-[50vw] mt-5">
                         A 4th year student at the University of Toronto studying software Engineering. 
                         I&apos;m passionate about software development, machine learning, and game development. 
-                        I recently completed my internship at Autodesk Research, and currently seeking opertunities in 2025.
-                        So, let&apos;s connect and build something amazing together! When I&apos;m not coding, you&apos;ll find me snowboarding, biking, or enjoying card games with friends.
+                        I recently completed my internship at Autodesk Research, and currently seeking opportunities in 2025.
+                        So, let&apos;s connect and build something amazing together! When I&apos;m not coding, you&apos;ll find me snowboarding, biking,
+                         or enjoying card games with friends.
                     </p>
                     <div className="mt-8">
                         <a href="mailto:anthony.qin@mail.utoronto.ca" className="text-blue-300 underline z-50">
