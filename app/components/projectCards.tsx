@@ -5,7 +5,7 @@ import Mirror from "../../public/assets/Projects/mirror.png";
 
 export const projectCards = [
    {
-    title: "Galaxia Bound, Video Game",
+    title: "Mirror’s Memento",
     image: Mirror,
     description: (
     <>
@@ -20,7 +20,7 @@ export const projectCards = [
     }
     },
   {
-    title: "Galaxia Bound, Video Game",
+    title: "Galaxia Bound",
     image: Galaxia,
     description: (
       <>
