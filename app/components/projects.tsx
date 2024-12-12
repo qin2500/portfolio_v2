@@ -1,5 +1,5 @@
 import React from "react";
-import { projectCards } from "./projectCards.tsx"; // Path to where you saved the data
+import { projectCards } from "./projectCards"; // Path to where you saved the data
 
 const Projects = () => {
   return (
