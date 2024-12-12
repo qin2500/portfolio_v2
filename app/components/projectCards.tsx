@@ -9,7 +9,7 @@ export const projectCards = [
     image: Mirror,
     description: (
     <>
-        I contributed to the development of Mirror's Memento, a Unity-based 3D puzzle game. 
+        I contributed to the development of Mirror&apos;s Memento, a Unity-based 3D puzzle game. 
         As part of a 12-person team, I assisted with the design and implementation a key systems such as dynamic controller support, and grid movement.
         The game is currently in open beta on itch.io, where we actively incorporate player feedback to enhance the gameplay experience.
         </>
