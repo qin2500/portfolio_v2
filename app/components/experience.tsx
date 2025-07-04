@@ -4,10 +4,10 @@ const experience = () => {
     return (
         <div className="mt-[4rem] m-5">
             <div>
-                <h1 className="text-5xl font-bold">Work Experience</h1>
-                <div className="bg-slate-50 bg-opacity-5 mt-7 p-5 outline-dotted outline-slate-200 rounded-lg">
+                <h1 className="text-5xl font-bold mb-5">Work Experience</h1>
+                <div className="bg-gradient-to-r from-slate-800 to-slate-900 bg-opacity-50 p-5 rounded-xl border border-slate-700 shadow-lg">
                     {/* Autodesk */}
-                    <div className="m-3">
+                    <div className="m-3 mb-8">
                         <div className="flex text-2xl font-bold flex-col w-full">
                             <p>Intern, Software Engineer, HCI & AI</p>
                             <a href="https://www.research.autodesk.com/research-areas/science/#human" target="_blank" rel="noopener noreferrer" className=" w-fit text-blue-400 hover:text-blue-200 cursor-pointer">
@@ -28,7 +28,7 @@ const experience = () => {
                     </div>
 
                     {/* Manulife */}
-                    <div className="m-3 mt-10">
+                    <div className="m-3 mb-8">
                         <div className="flex text-2xl font-bold flex-col">
                             <p>Full Stack Engineer Co-op</p>
                             <p className="ml-1 text-blue-400">@Manulife</p>
