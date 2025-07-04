@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "./projectCard";
-import { projects } from "@/app/data/projects.tsx";
-import { games } from "@/app/data/games.tsx";
+import { projects } from "@/app/data/projects";
+import { games } from "@/app/data/games";
 
 const Projects = () => {
   return (
