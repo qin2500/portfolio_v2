@@ -1,45 +1,46 @@
 import React from "react";
-import { projectCards } from "./projectCards"; // Path to where you saved the data
+import ProjectCard from "./projectCard";
+import { projects } from "@/app/data/projects";
+import { games } from "@/app/data/games";
 
 const Projects = () => {
   return (
     <div className="mt-[4rem] m-5">
       <div>
-        <h1 className="text-5xl font-bold">Projects </h1>
-        <div className="bg-slate-50 bg-opacity-5 mt-7 p-5 outline-dotted outline-slate-200 rounded-lg">
-
-          {projectCards.map((project, index) => (
-            <div key={index} className="m-3 flex flex-col sm:flex-row">
-
-              <div className="mr-5 h-[200px] w-[300px] mt-3 overflow-hidden">
-                <img src={project.image.src} alt={project.title} />
-              </div>
-
-              <div>
-                <div className="flex text-2xl font-bold flex-col w-full">
-                  <p>{project.title}</p>
-                </div>
-                <div className="mt-3">
-                  <p>{project.description}</p>
-                </div>
-                {project.link && (
-                  <div className="mt-2">
-                    <a
-                      href={project.link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-fit text-blue-400 hover:text-blue-200 cursor-pointer z-50"
-                    >
-                      <p className="ml-1 text-blue-300 underline">{project.link.text}</p>
-                    </a>
-                  </div>
-                )}
-              </div>
-
-            </div>
-          ))}
-
+        <h1 className="text-5xl font-bold">Projects</h1>
+        
+        {/* Software Projects Section */}
+        <div className="mt-10">
+          <h2 className="text-3xl font-bold mb-5 text-blue-300">Software Projects</h2>
+          <div className="bg-gradient-to-r from-slate-800 to-slate-900 bg-opacity-50 p-5 rounded-xl border border-slate-700">
+            {projects.map((project, index) => (
+              <ProjectCard 
+                key={`project-${index}`}
+                title={project.title}
+                image={project.image}
+                description={project.description}
+                link={project.link}
+              />
+            ))}
+          </div>
         </div>
+
+        {/* Game Projects Section */}
+        <div className="mt-14">
+          <h2 className="text-3xl font-bold mb-5 text-blue-300">Game Projects</h2>
+          <div className="bg-gradient-to-r from-slate-900 to-slate-800 bg-opacity-50 p-5 rounded-xl border border-slate-700">
+            {games.map((game, index) => (
+              <ProjectCard 
+                key={`game-${index}`}
+                title={game.title}
+                image={game.image}
+                description={game.description}
+                link={game.link}
+              />
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   );

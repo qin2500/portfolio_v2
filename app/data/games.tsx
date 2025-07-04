@@ -1,24 +1,22 @@
-import React from "react";
-import IntelliVerse from "../../public/assets/Projects/IntelliVerse_noBanner.png";
-import Galaxia from "../../public/assets/Projects/galaxia.png";
-import Mirror from "../../public/assets/Projects/mirror.png";
+import Galaxia from "@/public/assets/Projects/galaxia.png";
+import Mirror from "@/public/assets/Projects/mirror.png";
 
-export const projectCards = [
-   {
-    title: "Mirror’s Memento",
+export const games = [
+  {
+    title: "Mirror's Memento",
     image: Mirror,
     description: (
-    <>
+      <>
         I contributed to the development of Mirror&apos;s Memento, a Unity-based 3D puzzle game. 
         As part of a 12-person team, I assisted with the design and implementation a key systems such as dynamic controller support, and grid movement.
         The game is currently in open beta on itch.io, where we actively incorporate player feedback to enhance the gameplay experience.
-        </>
+      </>
     ),
     link: {
-        url: "https://kleinkodes.itch.io/doppelganger",
-        text: "Play it now on Itch.io"
+      url: "https://kleinkodes.itch.io/doppelganger",
+      text: "Play it now on Itch.io"
     }
-    },
+  },
   {
     title: "Galaxia Bound",
     image: Galaxia,
@@ -37,20 +35,5 @@ export const projectCards = [
       url: "https://qin2500.itch.io/galaxia-bound",
       text: "Play it now on Itch.io"
     }
-  },
-  {
-    title: "IntelliVerse, Mobile App",
-    image: IntelliVerse,
-    description: (
-      <>
-        A mobile app developed for <span className="text-blue-400">Hack the Valley 7</span> hosted by the University of Toronto.
-        IntelliVerse helps users gain insight into the emotions conveyed in their text messages by using a custom trained sentiment analysis model.
-        The project <span className="text-blue-400">won</span> in two award categories: Best Discovery Hack and Most Creative Use of Github.
-      </>
-    ),
-    link: {
-      url: "https://devpost.com/software/intelliverse",
-      text: "Project Link"
-    }
-  },
+  }
 ];
