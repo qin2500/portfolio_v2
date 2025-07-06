@@ -6,6 +6,25 @@ const experience = () => {
             <div>
                 <h1 className="text-5xl font-bold mb-5">Work Experience</h1>
                 <div className="bg-gradient-to-r from-slate-800 to-slate-900 bg-opacity-50 p-5 rounded-xl border border-slate-700 shadow-lg">
+                    {/* University of Toronto / Diamond Schmitt */}
+                    <div className="m-3 mb-8">
+                        <div className="flex text-2xl font-bold flex-col w-full">
+                            <p>Undergraduate Researcher – Procedural Generation Research Project</p>
+                                <p className="ml-1 text-blue-400">@University of Toronto / Diamond Schmitt</p>
+                                    
+                        </div>
+                        <p className="flex text-lg font-bold">May - August 2024</p>
+                         <div className="mt-3">
+                            <p>
+                            I designed and implemented a constraint-based floor map generation system
+                             using the Hierarchical Wave Function Collapse algorithm. This involved applying
+                              principles of constraint satisfaction, data modeling, and algorithmic optimization 
+                              to procedurally generate realistic floor plans. I presented the working prototype to 
+                              Diamond Schmitt Architects, which led to discussions around potential collaboration and access 
+                              to real architectural diagrams for further development.                            
+                            </p>
+                         </div>
+                    </div>
                     {/* Autodesk */}
                     <div className="m-3 mb-8">
                         <div className="flex text-2xl font-bold flex-col w-full">
