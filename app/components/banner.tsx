@@ -34,12 +34,18 @@ const Banner = ({navRef} : {navRef:  React.RefObject<HTMLDivElement>}) => {
                     </h1>
                                         
                     <p className="text-slate-100 w-[50vw] mt-5">
-                        A 4th year student at the University of Toronto studying software Engineering. 
-                        I&apos;m passionate about software development, machine learning, and game development. 
-                        I recently completed my internship at Autodesk Research, and currently seeking opportunities in 2025.
-                        So, let&apos;s connect and build something amazing together! When I&apos;m not coding, you&apos;ll find me snowboarding, biking,
-                         or enjoying card games with friends.
+                    Hi! I&apos;m a Computer Science student at the University of Toronto, entering my final year and graduating in Summer 2026. 
+                    I&apos;m passionate about software development, game design, and artificial intelligence. 
+                    Currently, I&apos;m working as a Cloud Engineer intern at HOOPP, working on infrastructure automation and scalable systems. 
+                    {/* Over the past few years, I&apos;ve also worked on projects ranging from generative design tools to AI-powered storytelling systems.  */}
+                    I&apos;m actively seeking full-time software engineering opportunities starting in 2026.
                     </p>
+                    <br />
+                    <p className="text-slate-100 w-[50vw] mt-5">                   
+                    When I&apos;m not coding, you&apos;ll find me snowboarding, biking, or playing card games with friends.
+                    {/* Let&apos;s connect and build something awesome together! */}
+                    </p>
+
                     <div className="mt-8">
                         <a href="mailto:anthony.qin@mail.utoronto.ca" className="text-blue-300 underline z-50">
                             Contact Me!📧
