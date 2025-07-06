@@ -13,7 +13,7 @@ const experience = () => {
                                 <p className="ml-1 text-blue-400">@University of Toronto / Diamond Schmitt</p>
                                     
                         </div>
-                        <p className="flex text-lg font-bold">May - August 2024</p>
+                        <p className="flex text-lg font-bold">January 2025 - Present</p>
                          <div className="mt-3">
                             <p>
                             I designed and implemented a constraint-based floor map generation system
