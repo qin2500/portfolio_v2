@@ -2,40 +2,52 @@ import React from "react";
 
 type ProjectCardProps = {
   title: string;
-  image: any;
   description: React.ReactNode;
   link: {
     url: string;
     text: string;
   };
+  image?: any; // Make image optional
 };
 
-const ProjectCard = ({ title, image, description, link }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, link, image }: ProjectCardProps) => {
   return (
-    <div className="flex flex-col sm:flex-row mb-8">
-      <div className="mr-5 h-[200px] w-[300px] mt-3 overflow-hidden">
-        <img src={image.src} alt={title} className="w-full h-full object-cover" />
-      </div>
-
-      <div className="flex-1">
-        <div className="flex text-2xl font-bold flex-col w-full">
-          <p>{title}</p>
-        </div>
-        <div className="mt-3">
-          <p>{description}</p>
-        </div>
-        {link && (
-          <div className="mt-2">
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-fit text-blue-400 hover:text-blue-200 cursor-pointer z-50"
-            >
-              <p className="ml-1 text-blue-300 underline">{link.text}</p>
-            </a>
+    <div className="mb-8 p-5 bg-slate-800 bg-opacity-50 rounded-lg border border-slate-700 hover:bg-slate-750 transition-colors">
+      <div className="flex flex-col md:flex-row gap-6">
+        {/* Conditionally render image if provided */}
+        {image && (
+          <div className="flex-shrink-0">
+            <img 
+              src={image.src} 
+              alt={title} 
+              className="h-48 w-48 rounded-lg object-cover"
+            />
           </div>
         )}
+        
+        <div className="flex-1">
+          <div className="text-2xl font-bold mb-3 text-blue-300">
+            {title}
+          </div>
+          <div className="text-slate-200 mb-4">
+            {description}
+          </div>
+          {link && (
+            <div>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                <span className="ml-1 underline">{link.text}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
