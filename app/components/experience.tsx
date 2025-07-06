@@ -6,6 +6,24 @@ const experience = () => {
             <div>
                 <h1 className="text-5xl font-bold mb-5">Work Experience</h1>
                 <div className="bg-gradient-to-r from-slate-800 to-slate-900 bg-opacity-50 p-5 rounded-xl border border-slate-700 shadow-lg">
+                    {/* HOOPP */}
+                    <div className="m-3 mb-8">
+                        <div className="flex text-2xl font-bold flex-col w-full">
+                            <p>Cloud Engineer Co-op</p>
+                            <a href="https://hoopp.com" target="_blank" rel="noopener noreferrer" className=" w-fit text-blue-400 hover:text-blue-200 cursor-pointer">
+                                <p className="ml-1 text-blue-400 underline">@HOOPP</p>
+                            </a>
+                                    
+                        </div>
+                        <p className="flex text-lg font-bold">May 2025 - Present</p>
+                         <div className="mt-3">
+                            <p>
+                             I supported the design and maintenance of scalable infrastructure systems. My work involved automating workflows,
+                              troubleshooting deployment pipelines, and contributing to internal tooling that improved cloud reliability and security.
+                               I also worked with group policy management, ServiceNow, and SQL Server tools to support operational efficiency across teams.                    
+                            </p>
+                         </div>
+                    </div>
                     {/* University of Toronto / Diamond Schmitt */}
                     <div className="m-3 mb-8">
                         <div className="flex text-2xl font-bold flex-col w-full">

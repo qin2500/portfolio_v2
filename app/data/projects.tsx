@@ -2,6 +2,21 @@ import IntelliVerse from "@/public/assets/Projects/IntelliVerse_noBanner.png";
 
 export const projects = [
   {
+    title: "Procedural Floor Plan Generation with Hierarchical Wave Function Collapse",
+    image: null,
+    description: (
+      <>
+        This is the prototype I created during my undergraduate research placement. 
+        It features a backend algorithm written in Python with visuals powered by Pygame, 
+        along with a plugin for Revit that allows users to export floor plans for use in the generator.
+      </>
+    ),
+    link: {
+      url: "https://github.com/amelia1248/IFC-Project",
+      text: "GitHub"
+    }
+  },
+  {
     title: "IntelliVerse, Mobile App",
     image: IntelliVerse,
     description: (
@@ -15,5 +30,6 @@ export const projects = [
       url: "https://devpost.com/software/intelliverse",
       text: "Project Link"
     }
-  }
+  },
+  
 ];
