@@ -133,7 +133,7 @@ const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
         </div>
 
         {/* Social links - always at bottom */}
-        <div className="flex justify-center py-4 bg-gradient-to-t from-black/20 to-transparent">
+        <div className="flex justify-center py-4">
           <div className="flex gap-2">
             <IconButton 
               href="https://github.com/qin2500?tab=repositories" 
