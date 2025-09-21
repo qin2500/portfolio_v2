@@ -1,13 +1,16 @@
+import React, { useEffect, useState } from "react";
 import { Typography, IconButton } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Itch from '../../public/assets/itch.svg';
 import Devpost from '../../public/assets/devpost.svg';
-import React, { ReactHTMLElement, useEffect, useState } from "react";
 
 const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
+  const [viewportHeight, setViewportHeight] = useState('100vh');
+  const [navHeight, setNavHeight] = useState(0);
+
   // Inject minimal scrollbar styles
-  React.useEffect(() => {
+  useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
       .scrollbar-minimal {
@@ -39,8 +42,6 @@ const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
       document.head.removeChild(style);
     };
   }, []);
-  const [viewportHeight, setViewportHeight] = useState('100vh');
-  const [navHeight, setNavHeight] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -64,36 +65,67 @@ const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
       {/* Main content container */}
       <div className="flex flex-col justify-between w-full" style={{ minHeight: viewportHeight }}>
         
-        {/* Bio section with scroll for narrow screens */}
-        <div className="flex-1 flex items-center justify-center px-4 py-8 min-h-0">
-          <div className="max-w-4xl w-full h-full flex items-center">
-            <div 
-              className="ml-0 sm:ml-[10%] lg:ml-[20%] items-center w-full overflow-y-auto scrollbar-minimal"
-              style={{ 
-                maxHeight: 'calc(100vh - 200px)', // Reserve space for social links
-                paddingRight: '8px' // Space for scrollbar
-              }}
-            >
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl text-slate-100 font-bold outline outline-slate-200 w-fit p-2 sm:p-3 bg-slate-200 bg-opacity-30 mb-4">
-                Hi! I&apos;m Anthony Qin
-              </h1>
-              
-              <div className="max-w-none sm:max-w-[60vw] lg:max-w-[50vw] pr-2">
-                <p className="text-slate-100 mt-3 sm:mt-5 text-sm sm:text-base">
-                  Hi! I&apos;m a Computer Science student at the University of Toronto, entering my final year and graduating in Summer 2026. I&apos;m passionate about software development, game design, and artificial intelligence. Currently, I&apos;m working as a Cloud Engineer intern at HOOPP, working on infrastructure automation and scalable systems. I&apos;m actively seeking full-time software engineering opportunities starting in 2026.
-                </p>
+        {/* Bio section with responsive layout */}
+        <div className="flex-1 flex items-center px-4 py-8 min-h-0">
+          <div className="w-full h-full">
+            {/* Mobile: centered and scrollable */}
+            <div className="block md:hidden w-full h-full flex items-center justify-center">
+              <div 
+                className="items-center w-full max-w-lg overflow-y-auto scrollbar-minimal"
+                style={{ 
+                  maxHeight: 'calc(100vh - 200px)',
+                  paddingRight: '8px'
+                }}
+              >
+                <h1 className="text-3xl text-slate-100 font-bold outline outline-slate-200 w-fit p-2 bg-slate-200 bg-opacity-30 mb-4 mx-auto">
+                  Hi! I&apos;m Anthony Qin
+                </h1>
                 
-                <p className="text-slate-100 mt-3 sm:mt-5 text-sm sm:text-base">
-                  When I&apos;m not coding, you&apos;ll find me snowboarding, biking, or playing card games with friends.
-                </p>
+                <div className="px-2">
+                  <p className="text-slate-100 mt-3 text-sm">
+                    Hi! I&apos;m a Computer Science student at the University of Toronto, entering my final year and graduating in Summer 2026. I&apos;m passionate about software development, game design, and artificial intelligence. Currently, I&apos;m working as a Cloud Engineer intern at HOOPP, working on infrastructure automation and scalable systems. I&apos;m actively seeking full-time software engineering opportunities starting in 2026.
+                  </p>
+                  
+                  <p className="text-slate-100 mt-3 text-sm">
+                    When I&apos;m not coding, you&apos;ll find me snowboarding, biking, or playing card games with friends.
+                  </p>
+                  
+                  <div className="mt-6 pb-4 text-center">
+                    <a 
+                      href="mailto:anthony.qin@mail.utoronto.ca" 
+                      className="text-blue-300 underline z-50 text-sm"
+                    >
+                      Contact Me!📧
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop: original left-aligned layout */}
+            <div className="hidden md:flex items-center">
+              <div className="ml-[10%] lg:ml-[20%] items-center">
+                <h1 className="text-4xl lg:text-6xl text-slate-100 font-bold outline outline-slate-200 w-fit p-3 bg-slate-200 bg-opacity-30 mb-4">
+                  Hi! I&apos;m Anthony Qin
+                </h1>
                 
-                <div className="mt-6 sm:mt-8 pb-4">
-                  <a 
-                    href="mailto:anthony.qin@mail.utoronto.ca" 
-                    className="text-blue-300 underline z-50 text-sm sm:text-base"
-                  >
-                    Contact Me!📧
-                  </a>
+                <div className="max-w-[60vw] lg:max-w-[50vw]">
+                  <p className="text-slate-100 mt-5 text-base">
+                    Hi! I&apos;m a Computer Science student at the University of Toronto, entering my final year and graduating in Summer 2026. I&apos;m passionate about software development, game design, and artificial intelligence. Currently, I&apos;m working as a Cloud Engineer intern at HOOPP, working on infrastructure automation and scalable systems. I&apos;m actively seeking full-time software engineering opportunities starting in 2026.
+                  </p>
+                  
+                  <p className="text-slate-100 mt-5 text-base">
+                    When I&apos;m not coding, you&apos;ll find me snowboarding, biking, or playing card games with friends.
+                  </p>
+                  
+                  <div className="mt-8">
+                    <a 
+                      href="mailto:anthony.qin@mail.utoronto.ca" 
+                      className="text-blue-300 underline z-50 text-base"
+                    >
+                      Contact Me!📧
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
