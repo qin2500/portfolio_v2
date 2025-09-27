@@ -14,9 +14,16 @@ const experience = () => {
                         period="May 2025 - Present"
                         description="I supported the design and maintenance of scalable infrastructure systems. My work involved automating workflows, troubleshooting deployment pipelines, and contributing to internal tooling that improved cloud reliability and security. I also worked with group policy management, ServiceNow, and SQL Server tools to support operational efficiency across teams."
                     />
+
+                    <ExperienceCard
+                        title="Machine Learning Intern"
+                        company="Themis AI"
+                        period="May 2025 - September 2025"
+                        description="I engineered a full-stack interactive image segmentation and classification interface for a data-labeling platform powered by CAPSA (uncertainty quantification) and ActiveLab (active learning). As part of this work, I implemented API integrations to fetch uncertain images identified by ActiveLab for annotation and return labeled data for continuous model retraining. I also enhanced the annotation workflow by improving usability, responsiveness, and the efficiency of data transfer between the frontend and backend."
+                    />
                     
                     <ExperienceCard
-                        title="Undergraduate Researcher – Procedural Generation Research Project"
+                        title="Undergraduate Researcher - Procedural Generation Research Project"
                         company="University of Toronto / Diamond Schmitt"
                         period="January 2025 - Present"
                         description="I designed and implemented a constraint-based floor map generation system using the Hierarchical Wave Function Collapse algorithm. This involved applying principles of constraint satisfaction, data modeling, and algorithmic optimization to procedurally generate realistic floor plans. I presented the working prototype to Diamond Schmitt Architects, which led to discussions around potential collaboration and access to real architectural diagrams for further development."
