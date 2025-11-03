@@ -12,7 +12,7 @@ export const projects = [
       </>
     ),
     link: {
-      url: "https://github.com/amelia1248/IFC-Project",
+      url: "https://github.com/qin2500/HWFC_floor_plan_generation",
       text: "GitHub"
     }
   },
