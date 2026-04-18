@@ -8,6 +8,13 @@ const experience = () => {
                 <h1 className="text-5xl font-bold mb-10">Work Experience</h1>
                 <div className="space-y-6">
                     <ExperienceCard
+                        title="Founding Full Stack Software Engineer"
+                        company="UMA"
+                        period="December 2025 – Present"
+                        description="Architected and managed the entire AWS cloud ecosystem solo, designing the infrastructure to support high-availability production workloads and seamless device-to-cloud communication. Directed the initial development of the Admin, Operator, and User web portals, establishing the core architecture and codebase for the company's entire web suite. Engineered a centralized backend API architecture to synchronize real-time data across IoT vending machines and web interfaces, enabling remote device management and automated reporting. Collaborated with hardware engineers to define communication protocols and integration standards between embedded systems and cloud services."
+                    />
+
+                    <ExperienceCard
                         title="Cloud Engineer Co-op"
                         company="HOOPP"
                         companyUrl="https://hoopp.com"

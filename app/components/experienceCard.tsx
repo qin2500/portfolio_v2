@@ -5,10 +5,11 @@ type ExperienceCardProps = {
   company: string;
   companyUrl?: string;
   period: string;
-  description: string;
+  description?: string;
+  bullets?: string[];
 };
 
-const ExperienceCard = ({ title, company, companyUrl, period, description }: ExperienceCardProps) => {
+const ExperienceCard = ({ title, company, companyUrl, period, description, bullets }: ExperienceCardProps) => {
   return (
     <div className="mb-8 p-5 bg-slate-800 bg-opacity-50 rounded-lg border border-slate-700 hover:bg-slate-750 transition-colors">
       <div className="flex text-2xl font-bold flex-col w-full">
@@ -23,7 +24,15 @@ const ExperienceCard = ({ title, company, companyUrl, period, description }: Exp
       </div>
       <p className="flex text-lg font-bold">{period}</p>
       <div className="mt-3">
-        <p>{description}</p>
+        {bullets ? (
+          <ul className="list-disc list-inside space-y-1">
+            {bullets.map((bullet, i) => (
+              <li key={i}>{bullet}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>{description}</p>
+        )}
       </div>
     </div>
   );
