@@ -81,13 +81,13 @@ const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
                   Hi! I&apos;m Anthony Qin
                 </h1>
                 
-                <div className="px-2">
+                <div className="px-2">  
                   <p className="text-slate-100 mt-3 text-sm">
-                    Hi! I&apos;m a Computer Science student at the University of Toronto, entering my final year and graduating in Summer 2026. I&apos;m passionate about software development, game design, and artificial intelligence. Currently, I&apos;m working as a Cloud Engineer intern at HOOPP, working on infrastructure automation and scalable systems. I&apos;m actively seeking full-time software engineering opportunities starting in 2026.
+                    Hi! I&apos;m Anthony, a backend and cloud engineer entering my final year of Computer Science at UofT. Currently, I&apos;m building scalable infrastructure as a Founding Software Engineer at UMA. I love blending technical precision with great user experiences, and I&apos;m actively seeking opportunities for 2026.
                   </p>
-                  
+
                   <p className="text-slate-100 mt-3 text-sm">
-                    When I&apos;m not coding, you&apos;ll find me snowboarding, biking, or playing card games with friends.
+                    Off the clock, I&apos;m either snowboarding, lifting, playing trading card games, or working on my own game projects.
                   </p>
                   
                   <div className="mt-6 pb-4 text-center">
@@ -111,11 +111,11 @@ const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
                 
                 <div className="max-w-[60vw] lg:max-w-[50vw]">
                   <p className="text-slate-100 mt-5 text-base">
-                    Hi! I&apos;m a Computer Science student at the University of Toronto, entering my final year and graduating in Summer 2026. I&apos;m passionate about software development, game design, and artificial intelligence. Currently, I&apos;m working as a Cloud Engineer intern at HOOPP, working on infrastructure automation and scalable systems. I&apos;m actively seeking full-time software engineering opportunities starting in 2026.
+                    Hi! I&apos;m Anthony, a backend and cloud engineer entering my final year of Computer Science at UofT. Currently, I&apos;m building scalable infrastructure as a Founding Software Engineer at UMA. I love blending technical precision with great user experiences, and I&apos;m actively seeking opportunities for 2026.
                   </p>
-                  
+
                   <p className="text-slate-100 mt-5 text-base">
-                    When I&apos;m not coding, you&apos;ll find me snowboarding, biking, or playing card games with friends.
+                    Off the clock, I&apos;m either snowboarding, lifting, playing trading card games, or working on my own game projects.
                   </p>
                   
                   <div className="mt-8">
