@@ -24,7 +24,7 @@ const experience = () => {
                             title="Cloud Engineer Co-op"
                             company="HOOPP"
                             companyUrl="https://hoopp.com"
-                            period="May 2025 - Present"
+                            period="May 2025 - December 2025"
                             description="I supported the design and maintenance of scalable infrastructure systems. My work involved automating workflows, troubleshooting deployment pipelines, and contributing to internal tooling that improved cloud reliability and security. I also worked with group policy management, ServiceNow, and SQL Server tools to support operational efficiency across teams."
                         />
                     </FadeIn>
@@ -42,7 +42,7 @@ const experience = () => {
                         <ExperienceCard
                             title="Undergraduate Researcher - Procedural Generation Research Project"
                             company="University of Toronto / Diamond Schmitt"
-                            period="January 2025 - Present"
+                            period="January 2025 - April 2025"
                             description="I designed and implemented a constraint-based floor map generation system using the Hierarchical Wave Function Collapse algorithm. This involved applying principles of constraint satisfaction, data modeling, and algorithmic optimization to procedurally generate realistic floor plans. I presented the working prototype to Diamond Schmitt Architects, which led to discussions around potential collaboration and access to real architectural diagrams for further development."
                         />
                     </FadeIn>
