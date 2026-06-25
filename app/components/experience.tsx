@@ -12,7 +12,7 @@ const experience = () => {
                 <div className="space-y-6">
                     <FadeIn delay={100}>
                         <ExperienceCard
-                            title="Founding Full Stack Software Engineer"
+                            title="Founding Cloud Architect/System Engineer"
                             company="UMA"
                             period="December 2025 – Present"
                             description="Architected and managed the entire AWS cloud ecosystem solo, designing the infrastructure to support high-availability production workloads and seamless device-to-cloud communication. Directed the initial development of the Admin, Operator, and User web portals, establishing the core architecture and codebase for the company's entire web suite. Engineered a centralized backend API architecture to synchronize real-time data across IoT vending machines and web interfaces, enabling remote device management and automated reporting. Collaborated with hardware engineers to define communication protocols and integration standards between embedded systems and cloud services."
@@ -21,7 +21,7 @@ const experience = () => {
 
                     <FadeIn delay={150}>
                         <ExperienceCard
-                            title="Cloud Engineer Co-op"
+                            title="Cloud Engineer"
                             company="HOOPP"
                             companyUrl="https://hoopp.com"
                             period="May 2025 - December 2025"
@@ -40,7 +40,7 @@ const experience = () => {
 
                     <FadeIn delay={250}>
                         <ExperienceCard
-                            title="Undergraduate Researcher - Procedural Generation Research Project"
+                            title="Undergraduate Research Fellow"
                             company="University of Toronto / Diamond Schmitt"
                             period="January 2025 - April 2025"
                             description="I designed and implemented a constraint-based floor map generation system using the Hierarchical Wave Function Collapse algorithm. This involved applying principles of constraint satisfaction, data modeling, and algorithmic optimization to procedurally generate realistic floor plans. I presented the working prototype to Diamond Schmitt Architects, which led to discussions around potential collaboration and access to real architectural diagrams for further development."
@@ -49,7 +49,7 @@ const experience = () => {
 
                     <FadeIn delay={300}>
                         <ExperienceCard
-                            title="Intern, Software Engineer, HCI & AI"
+                            title="Software Engineer, HCI & AI"
                             company="Autodesk Research"
                             companyUrl="https://www.research.autodesk.com/research-areas/science/#human"
                             period="May - August 2024"
@@ -59,7 +59,7 @@ const experience = () => {
 
                     <FadeIn delay={350}>
                         <ExperienceCard
-                            title="Full Stack Engineer Co-op"
+                            title="Full Stack Engineer"
                             company="Manulife"
                             period="January - April 2023"
                             description="Built a fullstack internal dashboard application from scratch using Spring Boot and React.js, greatly improving the collaboration between different departments. Also, provided application support on existing projects by configuring servers using Putty, insuring that the application is running smoothly when needed and assisted with development of automation scripts using PowerShell and C, dramatically improving the efficiency of my team."
