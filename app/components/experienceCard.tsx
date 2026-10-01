@@ -24,7 +24,7 @@ const ExperienceCard = ({ title, company, companyUrl, period, description, bulle
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
-      className="relative mb-8 p-5 bg-slate-800 bg-opacity-50 rounded-lg border border-slate-700 hover:border-slate-500 transition-all duration-300 overflow-hidden group"
+      className="relative p-5 bg-slate-800 bg-opacity-50 rounded-lg border border-slate-700 hover:border-slate-500 transition-all duration-300 overflow-hidden group"
     >
       <div
         className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"

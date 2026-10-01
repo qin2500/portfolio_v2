@@ -2,12 +2,22 @@ import React, { useEffect, useState } from "react";
 import { Typography, IconButton } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Itch from '../../public/assets/itch.svg';
 import Devpost from '../../public/assets/devpost.svg';
 
-const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
+const Banner = ({ navRef, experienceRef }: { navRef: React.RefObject<HTMLDivElement>, experienceRef: React.RefObject<HTMLDivElement> }) => {
   const [viewportHeight, setViewportHeight] = useState('100vh');
   const [navHeight, setNavHeight] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Hide the scroll cue once the visitor has started scrolling
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Inject minimal scrollbar styles
   useEffect(() => {
@@ -83,7 +93,7 @@ const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
                 
                 <div className="px-2">  
                   <p className="text-slate-100 mt-3 text-sm">
-                    Hi! I&apos;m Anthony, a backend and cloud engineer entering my final year of Computer Science at UofT. Currently, I&apos;m building scalable infrastructure as a Founding Software Engineer at UMA. I love blending technical precision with great user experiences, and I&apos;m actively seeking opportunities for 2026.
+                    Hi! I&apos;m Anthony, a backend and cloud engineer who studied Computer Science at UofT. I&apos;m currently a Software Engineer at <a href="https://sideshift.app" target="_blank" rel="noopener noreferrer" className="text-blue-300 underline hover:text-blue-200">SideShift</a>, where I&apos;m leading the migration of the platform&apos;s data layer from Firestore to PostgreSQL. I love blending technical precision with great user experiences.
                   </p>
 
                   <p className="text-slate-100 mt-3 text-sm">
@@ -111,7 +121,7 @@ const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
                 
                 <div className="max-w-[60vw] lg:max-w-[50vw]">
                   <p className="text-slate-100 mt-5 text-base">
-                    Hi! I&apos;m Anthony, a backend and cloud engineer entering my final year of Computer Science at UofT. Currently, I&apos;m building scalable infrastructure as a Founding Software Engineer at UMA. I love blending technical precision with great user experiences, and I&apos;m actively seeking opportunities for 2026.
+                    Hi! I&apos;m Anthony, a backend and cloud engineer who studied Computer Science at UofT. I&apos;m currently a Software Engineer at <a href="https://sideshift.app" target="_blank" rel="noopener noreferrer" className="text-blue-300 underline hover:text-blue-200">SideShift</a>, where I&apos;m leading the migration of the platform&apos;s data layer from Firestore to PostgreSQL. I love blending technical precision with great user experiences.
                   </p>
 
                   <p className="text-slate-100 mt-5 text-base">
@@ -181,6 +191,19 @@ const Banner = ({ navRef }: { navRef: React.RefObject<HTMLDivElement> }) => {
               />
             </IconButton>
           </div>
+        </div>
+
+        {/* Scroll cue */}
+        <div className={`flex justify-center pb-6 transition-opacity duration-500 ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+          <button
+            onClick={() => experienceRef.current?.scrollIntoView({ behavior: 'smooth' })}
+            aria-label="Scroll down to experience"
+            tabIndex={scrolled ? -1 : 0}
+            className="flex flex-col items-center text-slate-400 hover:text-slate-100 transition-colors duration-200"
+          >
+            <span className="text-xs uppercase tracking-[0.2em]">Scroll</span>
+            <KeyboardArrowDownIcon className="animate-bounce mt-1" />
+          </button>
         </div>
       </div>
     </div>

@@ -1,74 +1,56 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import ExperienceCard from "./experienceCard";
 import FadeIn from "./fadeIn";
+import { experiences } from "@/app/data/experience";
 
-const experience = () => {
+const Experience = () => {
+    const [selected, setSelected] = useState(0);
+    const active = experiences[selected];
+
     return (
-        <div className="mt-[4rem] m-5">
-            <div>
-                <FadeIn>
-                    <h1 className="text-5xl font-bold mb-10">Work Experience</h1>
-                </FadeIn>
-                <div className="space-y-6">
-                    <FadeIn delay={100}>
-                        <ExperienceCard
-                            title="Founding Cloud Architect/System Engineer"
-                            company="UMA"
-                            period="December 2025 – Present"
-                            description="Architected and managed the entire AWS cloud ecosystem solo, designing the infrastructure to support high-availability production workloads and seamless device-to-cloud communication. Directed the initial development of the Admin, Operator, and User web portals, establishing the core architecture and codebase for the company's entire web suite. Engineered a centralized backend API architecture to synchronize real-time data across IoT vending machines and web interfaces, enabling remote device management and automated reporting. Collaborated with hardware engineers to define communication protocols and integration standards between embedded systems and cloud services."
-                        />
-                    </FadeIn>
+        <div className="mt-[4rem] mb-5 w-full px-5">
+            <FadeIn>
+                <h1 className="text-5xl font-bold mb-10">Work Experience</h1>
+            </FadeIn>
 
-                    <FadeIn delay={150}>
-                        <ExperienceCard
-                            title="Cloud Engineer"
-                            company="HOOPP"
-                            companyUrl="https://hoopp.com"
-                            period="May 2025 - December 2025"
-                            description="I supported the design and maintenance of scalable infrastructure systems. My work involved automating workflows, troubleshooting deployment pipelines, and contributing to internal tooling that improved cloud reliability and security. I also worked with group policy management, ServiceNow, and SQL Server tools to support operational efficiency across teams."
-                        />
-                    </FadeIn>
+            <FadeIn delay={100}>
+                <div className="flex flex-col md:flex-row gap-6">
+                    {/* Company tabs: horizontal scroller on mobile, vertical list on desktop */}
+                    <div
+                        role="tablist"
+                        aria-label="Work experience"
+                        className="flex md:flex-col overflow-x-auto md:overflow-visible scrollbar-minimal md:w-64 shrink-0 border-b md:border-b-0 md:border-l border-slate-700"
+                    >
+                        {experiences.map((exp, i) => {
+                            const isActive = i === selected;
+                            return (
+                                <button
+                                    key={exp.company}
+                                    role="tab"
+                                    aria-selected={isActive}
+                                    aria-controls="experience-panel"
+                                    onClick={() => setSelected(i)}
+                                    className={`relative shrink-0 whitespace-nowrap md:whitespace-normal text-left px-4 py-3 -mb-px md:mb-0 md:-ml-px border-b-2 md:border-b-0 md:border-l-2 transition-colors duration-200 ${
+                                        isActive
+                                            ? "border-blue-400 bg-blue-400/10 text-blue-300"
+                                            : "border-transparent text-slate-400 hover:text-slate-100 hover:bg-white/5"
+                                    }`}
+                                >
+                                    <span className="block font-semibold">{exp.company}</span>
+                                    <span className="hidden md:block text-xs text-slate-500 mt-0.5">{exp.period}</span>
+                                </button>
+                            );
+                        })}
+                    </div>
 
-                    <FadeIn delay={200}>
-                        <ExperienceCard
-                            title="Machine Learning Intern"
-                            company="Themis AI"
-                            period="May 2025 - September 2025"
-                            description="I engineered a full-stack interactive image segmentation and classification interface for a data-labeling platform powered by CAPSA (uncertainty quantification) and ActiveLab (active learning). As part of this work, I implemented API integrations to fetch uncertain images identified by ActiveLab for annotation and return labeled data for continuous model retraining. I also enhanced the annotation workflow by improving usability, responsiveness, and the efficiency of data transfer between the frontend and backend."
-                        />
-                    </FadeIn>
-
-                    <FadeIn delay={250}>
-                        <ExperienceCard
-                            title="Undergraduate Research Fellow"
-                            company="University of Toronto / Diamond Schmitt"
-                            period="January 2025 - April 2025"
-                            description="I designed and implemented a constraint-based floor map generation system using the Hierarchical Wave Function Collapse algorithm. This involved applying principles of constraint satisfaction, data modeling, and algorithmic optimization to procedurally generate realistic floor plans. I presented the working prototype to Diamond Schmitt Architects, which led to discussions around potential collaboration and access to real architectural diagrams for further development."
-                        />
-                    </FadeIn>
-
-                    <FadeIn delay={300}>
-                        <ExperienceCard
-                            title="Software Engineer, HCI & AI"
-                            company="Autodesk Research"
-                            companyUrl="https://www.research.autodesk.com/research-areas/science/#human"
-                            period="May - August 2024"
-                            description="Developed a web-based prototype using Next.js, LangChain, and React Flow to help authors visualize and analyze their stories. By leveraging large language models, I automated the extraction of narrative elements, enabling the creation of digital storyboards. Collaborated closely with my research manager to refine project direction, focusing on providing innovative perspectives for authors. Designed a flexible software architecture that facilitated rapid prototyping and adaptation to evolving project needs."
-                        />
-                    </FadeIn>
-
-                    <FadeIn delay={350}>
-                        <ExperienceCard
-                            title="Full Stack Engineer"
-                            company="Manulife"
-                            period="January - April 2023"
-                            description="Built a fullstack internal dashboard application from scratch using Spring Boot and React.js, greatly improving the collaboration between different departments. Also, provided application support on existing projects by configuring servers using Putty, insuring that the application is running smoothly when needed and assisted with development of automation scripts using PowerShell and C, dramatically improving the efficiency of my team."
-                        />
-                    </FadeIn>
+                    <div id="experience-panel" role="tabpanel" className="flex-1 min-w-0">
+                        <div key={selected} className="animate-fade-in"><ExperienceCard {...active} /></div>
+                    </div>
                 </div>
-            </div>
+            </FadeIn>
         </div>
     );
 }
 
-export default experience;
+export default Experience;
